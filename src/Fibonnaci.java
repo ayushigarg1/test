@@ -1,23 +1,17 @@
-public class Fibonnaci {
+class Fibonacci {
   public static void main(String[] args) {
-    int n = 10; // Number of Fibonacci numbers to generate
-    int[] fibonacciNumbers = generateFibonacci(n);
 
-    System.out.print("Fibonacci series: ");
-    for (int num : fibonacciNumbers) {
-      System.out.print(num + " ");
-    }
-  }
+    int n = 100, firstTerm = 0, secondTerm = 1;
 
-  public static int[] generateFibonacci(int n) {
-    int[] fibonacci = new int[n];
-    fibonacci[0] = 0;
-    if (n > 1) {
-      fibonacci[1] = 1;
-      for (int i = 2; i < n; i++) {
-        fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2];
-      }
+    System.out.println("Fibonacci Series Upto " + n + ": ");
+
+    while (firstTerm <= n) {
+      System.out.print(firstTerm + ", ");
+
+      int nextTerm = firstTerm + secondTerm;
+      firstTerm = secondTerm;
+      secondTerm = nextTerm;
+
     }
-    return fibonacci;
   }
 }
