@@ -4,6 +4,7 @@ public class Anagram {
         String str1 = "listen";
         String str2 = "silent";
 
+        // Check if the two strings are anagrams
         boolean isAnagram = checkAnagram(str1, str2);
         System.out.println("Are the two strings anagrams? " + isAnagram);
     }
